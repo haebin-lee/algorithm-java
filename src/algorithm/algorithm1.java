@@ -16,4 +16,45 @@ public class algorithm1 {
 		
 		
 	}
+	
+	public void makeTree(String [] inputs){
+		Node root = new Node();
+		
+		for(String input: inputs){
+			String [] list = input.split(" ");
+			for(String item: list){
+			
+			}
+		}
+	}
+	
+	
+	
+	class Node<T> {
+		
+		T root;
+		Node<T> left;
+		Node<T> right;
+		public T getRoot() {
+			return root;
+		}
+		public void setRoot(T root) {
+			this.root = root;
+		}
+		public Node<T> getLeft() {
+			return left;
+		}
+		public void setLeft(Node<T> left) {
+			this.left = left;
+		}
+		public Node<T> getRight() {
+			return right;
+		}
+		public void setRight(Node<T> right) {
+			this.right = right;
+		}
+		
+		
+		
+	}
 }
