@@ -1,7 +1,7 @@
 package algorithm;
 import java.util.Scanner;
 
-public class algorithm1 {
+public class Algorithm1 {
 	
 	static Scanner keyboard = new Scanner(System.in);  // Reading from System.in
 

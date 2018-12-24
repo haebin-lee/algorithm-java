@@ -4,10 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class algorithm2 {
+/**
+ * 기본 스택 구현하기
+ * algorithm2
+ * @author haebinlee
+ * @since 2018. 12. 24.
+ * @history
+ * <pre>
+ * << 개정이력(Modification Information) >>
+ *   수정일      수정자           수정내용
+ *  -------    --------    ---------------------------
+ *  
+ *
+ * </pre>
+ */
+public class Stack1 {
 	
 	static Scanner keyboard = new Scanner(System.in);
-	static List<Integer> stack = new ArrayList<>();
+	static List stack = new ArrayList<>();
 	
 	public static void main(String[] args){
 		
@@ -41,16 +55,16 @@ public class algorithm2 {
 			
 		}
 	}
-	public static void push(int num){
+	public static <T> void push(T num){
 		stack.add(num);
 	}
 	
-	public static int pop(){
+	public static <T> int pop(){
 		if(top() == -1){
 			return -1;
 		}
 		int index = stack.size()-1;
-		int pop = stack.get(index);
+		int pop = (int) stack.get(index);
 		stack.remove(index);
 		return pop;
 	}
@@ -71,7 +85,7 @@ public class algorithm2 {
 		if(size <=0){
 			return -1;
 		}
-		int top = stack.get(size-1);
+		int top = (int) stack.get(size-1);
 		return top;
 	}
 }
