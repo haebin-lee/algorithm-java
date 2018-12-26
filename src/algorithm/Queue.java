@@ -3,42 +3,41 @@ package algorithm;
 public class Queue{
 	
 	String[] queue = new String[100000];
-	int front = 0; 
+	int front = -1; 
 	int back = -1;
 	void push (String item){
 		queue[++back] = item;
-		
 	}
 	
 	String pop(){
-		if(front ==-1 || front>back)
-			return null;
-		String item = queue[front];
-		queue[front++] = null;
+		if(front==back)
+			return null; //queue is empty
+		int index = ++front;
+		String item = queue[index];
+		queue[index] = null;
 		return item;
 	}
 	
 	int size() {
-		if(front>back) return 0;
-		return back-front+1;
+		return back-front;
 	}
 	
 	String front() { 
-		String item = queue[front];
+		int index = front+1;
+		String item = queue[index];
 		return item;
 		
 	}
 	
 	String back() {
-		if(back != -1){
-			String item = queue[back];
-			return item;
-		}
-		return null;
+		if(front==back)
+			return null;
+		String item = queue[back];
+		return item;
 	}
 	
 	int empty(){
-		if(size()==0) return 1;
+		if(front==back) return 1;
 		return 0;
 	}
 	
