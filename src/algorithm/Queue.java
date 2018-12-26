@@ -10,12 +10,9 @@ public class Queue{
 	}
 	
 	String pop(){
-		if(front==back)
-			return null; //queue is empty
-		int index = ++front;
-		String item = queue[index];
-		queue[index] = null;
-		return item;
+		if(isEmpty())
+			return null; 
+		return queue[++front];
 	}
 	
 	int size() {
@@ -23,23 +20,26 @@ public class Queue{
 	}
 	
 	String front() { 
-		int index = front+1;
-		String item = queue[index];
+		String item = queue[front+1];
 		return item;
 		
 	}
 	
 	String back() {
-		if(front==back)
+		if(isEmpty())
 			return null;
 		String item = queue[back];
 		return item;
 	}
 	
 	int empty(){
-		if(front==back) return 1;
+		if(isEmpty()) return 1;
 		return 0;
 	}
 	
+	boolean isEmpty(){
+		if(front==back) return true;
+		return false;
+	}
 	
 }
