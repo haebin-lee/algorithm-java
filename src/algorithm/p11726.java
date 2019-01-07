@@ -12,16 +12,19 @@ public class p11726 {
 	public static void main(String[] args){
 		
 		int num = keyboard.nextInt();
-		keyboard.nextLine();
 		
-		int [] d = new int[num+1];
+		Long [] d = new Long[num+1];
 		
-		d[0] = 0;
-		d[1] = 1;
-		d[2] = 2;
+		if( num ==1 || num ==2){
+			System.out.println(num);
+			return;
+		}
+		d[1] = 1L;
+		d[2] = 2L;
 		for(int i = 3 ; i< d.length ; i++){
 			d[i] = (d[i-1]+d[i-2])%10007;
 		}
 		System.out.println(d[num]);
 	}
+	
 }
