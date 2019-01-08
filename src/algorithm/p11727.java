@@ -10,8 +10,12 @@ public class p11727 {
 		int num = keyboard.nextInt();
 		Long [] d = new Long[num+1];
 		
-		if( num == 1 || num == 2){
+		if( num == 1){
 			System.out.println(num);
+			return; 
+		}
+		if( num == 2){
+			System.out.println(2);
 			return; 
 		}
 			
