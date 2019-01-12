@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.queue;
 
 import java.util.Arrays;
 
