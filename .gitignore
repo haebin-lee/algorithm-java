@@ -1,1 +1,5 @@
 bin/**/*.class
+.idea
+algorithm.iml
+src/*.iml
+bin/*.iml
