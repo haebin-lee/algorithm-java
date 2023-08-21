@@ -35,7 +35,7 @@ public class Stack2 {
 	}
 	
 	public static String checkVPS(String check){
-		Stack<String> fn = new Stack<>();
+		CustomStack<String> fn = new CustomStack<>();
 		String[] temp = check.split("");
 		
 		for(String i : temp){

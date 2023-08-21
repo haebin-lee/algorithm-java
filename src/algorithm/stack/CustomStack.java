@@ -3,7 +3,7 @@ package algorithm.stack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Stack<T> {
+public class CustomStack<T> {
 	
 	
 	private List<T> stack = new ArrayList<>();
