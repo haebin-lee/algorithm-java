@@ -1,7 +1,5 @@
 package algorithm.leetcode.slidingwindow;
 
-import org.omg.CORBA.MARSHAL;
-
 public class MaximumNumberOfVowelsInSubstring {
     public static void main(String[] args) {
         System.out.println(maxVowels("abciiidef", 3));
