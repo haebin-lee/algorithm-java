@@ -1,9 +1,5 @@
 package algorithm.leetcode.graph;
 
-import javafx.util.Pair;
-
-import java.util.*;
-
 public class NumberOfIsland {
 
     public static int numIslands(char[][] grid) {
@@ -14,7 +10,8 @@ public class NumberOfIsland {
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1'){
-                    bfs(grid, i, j);
+                    bfs(grid, i, j)
+                    ;
                     count++;
 
                 }
