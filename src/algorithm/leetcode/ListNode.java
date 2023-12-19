@@ -14,4 +14,13 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public static void display(ListNode node) {
+        ListNode pointer = node;
+        while(pointer != null) {
+            System.out.print(pointer.val + " ");
+            pointer = pointer.next;
+        }
+        System.out.println();
+    }
 }
