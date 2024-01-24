@@ -3,6 +3,8 @@ package algorithm.leetcode.linkedlist;
 import algorithm.leetcode.ListNode;
 import algorithm.leetcode.ListNodeHelper;
 
+import java.util.List;
+
 public class DeleteMiddleNode {
 
     public static void main(String[] args) {
@@ -37,7 +39,6 @@ public class DeleteMiddleNode {
         a1.next = a2;
         ListNodeHelper.print(p.deleteMiddle(a1));
 
-
         // todo 1개 있을 대는 ?
         ListNode b1 = new ListNode(2);
         ListNodeHelper.print(p.deleteMiddle(b1));
@@ -45,22 +46,15 @@ public class DeleteMiddleNode {
     }
 
     public ListNode deleteMiddle(ListNode head) {
-        ListNode prev = null;
+        if (head == null || head.next == null) return null;
         ListNode slow = head;
-        ListNode fast = head;
+        ListNode fast = head.next.next;
         while (fast != null && fast.next != null) {
-            prev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
-        if (prev == null)
-            return null;
-        else if (slow.next == null) {
-            prev.next = null;
-        } else {
-            prev.next = slow.next;
-        }
-        return slow;
+        slow.next = slow.next.next;
+        return head;
     }
 
 }
